@@ -1,2 +1,4 @@
 triple-store/*
 files/*
+!triple-store/.gitkeep
+!files/.gitkeep
