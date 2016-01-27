@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://methodo-stats-tutor.com" uri="file:/app/mst/ontologies/int/mst.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1451295941482" name="http://purl.obolibrary.org/obo/obcs.owl" uri="obcs_merged_inferred.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1451295941482" name="duplicate:http://www.w3.org/2002/07/owl" uri="epidemiology_ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1451295941482" name="duplicate:http://www.w3.org/2002/07/owl" uri="stato.xrdf"/>
+        <uri id="Automatically generated entry, Timestamp=1451295941482" name="duplicate:http://www.w3.org/2002/07/owl" uri="epo.owl"/>
+    </group>
+</catalog>
