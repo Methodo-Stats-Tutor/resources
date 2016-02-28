@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://epidemiology_ontology.owl" uri="file:/home/nps/Projets/stat-tutor/OWL/epidemiology_ontology.owl"/>
-    <uri id="Imports Wizard Entry" name="http://www.w3.org/2002/07/owl" uri="file:/app/mst/ontologies/ext/stato.xrdf"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1453844370413" name="duplicate:http://www.semanticweb.org/nps/ontologies/2015/11/untitled-ontology-9" uri="test.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1453844370413" name="duplicate:http://www.semanticweb.org/nps/ontologies/2015/11/untitled-ontology-9" uri="mst.owl"/>
-    </group>
-</catalog>
