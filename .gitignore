@@ -1,9 +1,11 @@
 triple-store/*
 lucene/*
 files/*
+files/publi/*
 !triple-store/.gitkeep
 !lucene/.gitkeep
 !files/.gitkeep
+!files/publi/.gitkeep
 *.swp
 *.swo
 *~
