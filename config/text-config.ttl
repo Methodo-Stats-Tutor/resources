@@ -30,14 +30,14 @@ text:TextIndexLucene  rdfs:subClassOf   text:TextIndex .
 
 # A TDB datset used for RDF storage
 <#dataset> rdf:type      tdb:DatasetTDB ;
-    tdb:location "/app/mst/triple-store" ;
+    tdb:location "/app/mstr/triple-store" ;
   ##  tdb:unionDefaultGraph true ; # Optional
     .
 
 # Text index description
 <#indexLucene> a text:TextIndexLucene ;
    ## text:directory <file:Lucene> ;
-    text:directory "/app/mst/lucene" ;
+    text:directory "/app/mstr/lucene" ;
     text:entityMap <#entMap> ;
     .
 # Mapping in the index
@@ -45,17 +45,17 @@ text:TextIndexLucene  rdfs:subClassOf   text:TextIndex .
 # Graph stored in field "graph"
 # rdfs:label is mapped to field "text"
 
-@prefix mst:    <http://methodo-stats-tutor.com#> .
+@prefix mstr:    <http://methodo-stat-tutor.com#> .
 <#entMap> a text:EntityMap ;
     text:entityField      "uri" ;
     text:defaultField     "comment" ;
     text:map (
          [ text:field "comment" ; text:predicate rdfs:comment ]
          [ text:field "label" ; text:predicate rdfs:label ]
-         [ text:field "nom" ; text:predicate mst:nom ]
-         [ text:field "document-abstract" ; text:predicate mst:abstract ]
-         [ text:field "document-title" ; text:predicate mst:title ]
-         [ text:field "document-journal" ; text:predicate mst:journal ]
-         [ text:field "document-author" ; text:predicate mst:author ]
-         [ text:field "document-pmid" ; text:predicate mst:pmid ]
+         [ text:field "nom" ; text:predicate mstr:nom ]
+         [ text:field "document-abstract" ; text:predicate mstr:abstract ]
+         [ text:field "document-title" ; text:predicate mstr:title ]
+         [ text:field "document-journal" ; text:predicate mstr:journal ]
+         [ text:field "document-author" ; text:predicate mstr:author ]
+         [ text:field "document-pmid" ; text:predicate mstr:pmid ]
          ) .

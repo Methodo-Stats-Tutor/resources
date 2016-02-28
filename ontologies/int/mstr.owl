@@ -1,0 +1,1625 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY methodo-stat-tutor2 "http://methodo-stat-tutor.com#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY univ-bench "http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#" >
+    <!ENTITY untitled-ontology-9 "http://www.semanticweb.org/nps/ontologies/2015/11/untitled-ontology-9#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/nps/ontologies/2015/11/untitled-ontology-9#"
+     xml:base="http://www.semanticweb.org/nps/ontologies/2015/11/untitled-ontology-9"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:untitled-ontology-9="http://www.semanticweb.org/nps/ontologies/2015/11/untitled-ontology-9#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:univ-bench="http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:methodo-stat-tutor2="http://methodo-stat-tutor.com#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="http://methodo-stat-tutor.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#worksFor -->
+
+    <owl:AnnotationProperty rdf:about="&univ-bench;worksFor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://methodo-stat-tutor.com#moyenne -->
+
+    <rdfs:Datatype rdf:about="&methodo-stat-tutor2;moyenne">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;double">10.0</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#moyenne_faible -->
+
+    <rdfs:Datatype rdf:about="&methodo-stat-tutor2;moyenne_faible">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxExclusive rdf:datatype="&xsd;double">10.0</xsd:maxExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#moyenne_forte -->
+
+    <rdfs:Datatype rdf:about="&methodo-stat-tutor2;moyenne_forte">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;double">10.0</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#nomFamille -->
+
+    <rdfs:Datatype rdf:about="&methodo-stat-tutor2;nomFamille">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200200/plus -->
+
+    <rdfs:Datatype rdf:about="&obo;OBI_0200200/plus"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200200/plusplus -->
+
+    <rdfs:Datatype rdf:about="&obo;OBI_0200200/plusplus"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://methodo-stat-tutor.com#a_pour_tag -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;a_pour_tag"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#dependsOn -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;dependsOn"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#fileName -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;fileName"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasChoiceZone -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasChoiceZone">
+        <rdfs:domain rdf:resource="&methodo-stat-tutor2;Question"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasFinished -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasFinished"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasLastDateExo -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasLastDateExo"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasMarkForExo -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasMarkForExo">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&methodo-stat-tutor2;hasMark"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasMoyenne -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasMoyenne"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasNotFinished -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasNotFinished">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasPubliZone -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasPubliZone">
+        <rdfs:domain rdf:resource="&methodo-stat-tutor2;ChoiceZone"/>
+        <rdfs:range rdf:resource="&methodo-stat-tutor2;PubliZone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasQcmTry -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasQcmTry"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasQuestion -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasQuestion">
+        <rdfs:domain rdf:resource="&methodo-stat-tutor2;Qcm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasTag -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasTag">
+        <rdfs:range rdf:resource="&methodo-stat-tutor2;Exercice"/>
+        <rdfs:range rdf:resource="&methodo-stat-tutor2;Tag"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&methodo-stat-tutor2;Exercice"/>
+                    <rdf:Description rdf:about="&methodo-stat-tutor2;PubliZone"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasTeacher -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasTeacher"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasValidateExo -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasValidateExo"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasValidateExoTry -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;hasValidateExoTry"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#nePasProposerExercise -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;nePasProposerExercise"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#proposeExercise -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;proposeExercise"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#referencesExercise -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;referencesExercise"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#refersQcm -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;refersQcm">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#user -->
+
+    <owl:ObjectProperty rdf:about="&methodo-stat-tutor2;user"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://methodo-stat-tutor.com#a_pour_moyenne -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;a_pour_moyenne"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#d8Add -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;d8Add"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#dontMasterNotion -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;dontMasterNotion">
+        <rdfs:domain rdf:resource="&methodo-stat-tutor2;Student"/>
+        <rdfs:subPropertyOf rdf:resource="&methodo-stat-tutor2;notion"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#giveNotion -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;giveNotion">
+        <rdfs:domain rdf:resource="&methodo-stat-tutor2;Exercice"/>
+        <rdfs:subPropertyOf rdf:resource="&methodo-stat-tutor2;notion"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasColor -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;hasColor"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasFirstDateExo -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;hasFirstDateExo"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasLastD8 -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;hasLastD8"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasLastDateExo -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;hasLastDateExo"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasMark -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;hasMark">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasName -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;hasName"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;hasValue"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#mark -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;mark"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#masterNotion -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;masterNotion">
+        <rdfs:domain rdf:resource="&methodo-stat-tutor2;Student"/>
+        <rdfs:subPropertyOf rdf:resource="&methodo-stat-tutor2;notion"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#needNotion -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;needNotion">
+        <rdfs:domain rdf:resource="&methodo-stat-tutor2;Exercice"/>
+        <rdfs:subPropertyOf rdf:resource="&methodo-stat-tutor2;notion"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#notion -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;notion">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#path -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;path"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#refersToPubliAnnot -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;refersToPubliAnnot"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#traiteNotion -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;traiteNotion">
+        <rdfs:domain rdf:resource="&methodo-stat-tutor2;Exercice"/>
+        <rdfs:subPropertyOf rdf:resource="&methodo-stat-tutor2;notion"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#uri -->
+
+    <owl:DatatypeProperty rdf:about="&methodo-stat-tutor2;uri"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/a_pour_difficulte -->
+
+    <owl:DatatypeProperty rdf:about="&obo;a_pour_difficulte"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://methodo-stat-tutor.com#ChoiceZone -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;ChoiceZone"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#CourseMaterial -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;CourseMaterial"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#CourseMaterialContainingConceptDifficultyMedium -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;CourseMaterialContainingConceptDifficultyMedium">
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;CourseMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#Exercice -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;Exercice">
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;CourseMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#ExerciceTry -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;ExerciceTry"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#ExternalConcept -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;ExternalConcept">
+        <rdfs:label rdf:datatype="&xsd;string">Concepts MSTR</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">C&apos;est un concept externe</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#Moyenne -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;Moyenne"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#Picture -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;Picture"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#PubliZone -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;PubliZone"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#PublicationAnnot -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;PublicationAnnot">
+        <rdfs:label xml:lang="fr">Document Annoté</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#Qcm -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;Qcm">
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;Exercice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#QcmTry -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;QcmTry">
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;ExerciceTry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#Question -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;Question"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#Student -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;Student">
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#StudentBad -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;StudentBad">
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#StudentGood -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;StudentGood">
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#StudentMedium -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;StudentMedium">
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#Tag -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;Tag"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#Teacher -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;Teacher">
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#User -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;User"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#a_pou_moyenne_faible -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;a_pou_moyenne_faible">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&methodo-stat-tutor2;a_pour_moyenne"/>
+                <owl:someValuesFrom rdf:resource="&methodo-stat-tutor2;moyenne_faible"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;axiome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#a_pour_moyenne_forte -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;a_pour_moyenne_forte">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&methodo-stat-tutor2;a_pour_moyenne"/>
+                <owl:someValuesFrom rdf:resource="&methodo-stat-tutor2;moyenne_forte"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;axiome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#anova -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;anova">
+        <rdfs:label>ANOVA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;testsstatistiques"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#axiome -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;axiome"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#chisquare -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;chisquare">
+        <rdfs:label>chi square test</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;testsstatistiques"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#concepttest -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;concepttest">
+        <rdfs:label>concept test</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#ethique -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;ethique">
+        <rdfs:label xml:lang="fr">Éthique</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;ExternalConcept"/>
+        <rdfs:comment xml:lang="fr">Ce domaine est ....</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#fishertest -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;fishertest">
+        <rdfs:label>Student&apos;s t-test</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;testsstatistiques"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#nicomaque -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;nicomaque">
+        <rdfs:label xml:lang="fr">L&apos;étique à Nicomaque</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;ethique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#onewayanova -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;onewayanova">
+        <rdfs:label>one-way ANOVA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#statistique -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;statistique">
+        <rdfs:label xml:lang="fr">Statistique</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;ExternalConcept"/>
+        <rdfs:comment xml:lang="fr">C&apos;est un domaine très particulier</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#testsstatistiques -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;testsstatistiques">
+        <rdfs:label>statistical hypothesis test</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;statistique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#twowayanova -->
+
+    <owl:Class rdf:about="&methodo-stat-tutor2;twowayanova">
+        <rdfs:label>two-way ANOVA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200200/CourseMaterialContainingConceptDifficultyHard -->
+
+    <owl:Class rdf:about="&obo;OBI_0200200/CourseMaterialContainingConceptDifficultyHard">
+        <rdfs:subClassOf rdf:resource="&methodo-stat-tutor2;CourseMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://methodo-stat-tutor.com#ANOVA -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;ANOVA"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#chi_square_test -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;chi_square_test"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#choicezone1 -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;choicezone1">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;ChoiceZone"/>
+        <methodo-stat-tutor2:hasPubliZone rdf:resource="&methodo-stat-tutor2;publizone1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#exo1 -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;exo1">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;Exercice"/>
+        <rdf:type rdf:resource="&methodo-stat-tutor2;Qcm"/>
+        <methodo-stat-tutor2:needNotion rdf:datatype="&xsd;anyURI">http://methodo-stat-tutor.com#Anova2</methodo-stat-tutor2:needNotion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#exo2 -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;exo2">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;Qcm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#exo3 -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;exo3">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;Qcm"/>
+        <methodo-stat-tutor2:needNotion rdf:datatype="&xsd;anyURI">http://methodo-stat-tutor.com#cptDiff2</methodo-stat-tutor2:needNotion>
+        <methodo-stat-tutor2:needNotion rdf:datatype="&xsd;anyURI">http://methodo-stat-tutor.com#cptDiff3</methodo-stat-tutor2:needNotion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#exo4 -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;exo4">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;Exercice"/>
+        <rdf:type rdf:resource="&methodo-stat-tutor2;Qcm"/>
+        <methodo-stat-tutor2:giveNotion rdf:datatype="&xsd;anyURI">http://methodo-stat-tutor.com#cptDiff2</methodo-stat-tutor2:giveNotion>
+        <methodo-stat-tutor2:dependsOn rdf:resource="&methodo-stat-tutor2;exo1"/>
+        <methodo-stat-tutor2:dependsOn rdf:resource="&methodo-stat-tutor2;exo2"/>
+        <methodo-stat-tutor2:dependsOn rdf:resource="&methodo-stat-tutor2;exo3"/>
+        <methodo-stat-tutor2:hasQuestion rdf:resource="&methodo-stat-tutor2;question1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#filename -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;filename"/>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#moyenne -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;moyenne">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;Moyenne"/>
+        <methodo-stat-tutor2:hasValue rdf:datatype="&xsd;float">9.0</methodo-stat-tutor2:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#nicolas -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;nicolas">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;Student"/>
+        <methodo-stat-tutor2:hasValidateExo rdf:resource="&methodo-stat-tutor2;exo4"/>
+        <methodo-stat-tutor2:hasQcmTry rdf:resource="&obo;OBI_0200200/qcmTryExo1Nico"/>
+        <methodo-stat-tutor2:hasQcmTry rdf:resource="&obo;OBI_0200200/qcmTryNicolas"/>
+        <methodo-stat-tutor2:hasQcmTry rdf:resource="&obo;OBI_0200200/qcmtryexo2Nico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#publizone1 -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;publizone1">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;PubliZone"/>
+        <methodo-stat-tutor2:hasTag rdf:resource="&methodo-stat-tutor2;tag1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#question1 -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;question1">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;Question"/>
+        <methodo-stat-tutor2:hasChoiceZone rdf:resource="&methodo-stat-tutor2;choicezone1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://methodo-stat-tutor.com#tag1 -->
+
+    <owl:NamedIndividual rdf:about="&methodo-stat-tutor2;tag1">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;Tag"/>
+        <methodo-stat-tutor2:uri rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/OBI_0200201</methodo-stat-tutor2:uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200200/qcmTryExo1Nico -->
+
+    <owl:NamedIndividual rdf:about="&obo;OBI_0200200/qcmTryExo1Nico">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;QcmTry"/>
+        <methodo-stat-tutor2:mark rdf:datatype="&xsd;float">15.0</methodo-stat-tutor2:mark>
+        <methodo-stat-tutor2:refersQcm rdf:resource="&methodo-stat-tutor2;exo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200200/qcmTryNicolas -->
+
+    <owl:NamedIndividual rdf:about="&obo;OBI_0200200/qcmTryNicolas">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;QcmTry"/>
+        <methodo-stat-tutor2:mark rdf:datatype="&xsd;float">5.0</methodo-stat-tutor2:mark>
+        <methodo-stat-tutor2:refersQcm rdf:resource="&methodo-stat-tutor2;exo3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200200/qcmtryexo2Nico -->
+
+    <owl:NamedIndividual rdf:about="&obo;OBI_0200200/qcmtryexo2Nico">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;QcmTry"/>
+        <methodo-stat-tutor2:mark rdf:datatype="&xsd;float">15.0</methodo-stat-tutor2:mark>
+        <methodo-stat-tutor2:refersQcm rdf:resource="&methodo-stat-tutor2;exo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200200/test -->
+
+    <owl:NamedIndividual rdf:about="&obo;OBI_0200200/test">
+        <rdf:type rdf:resource="&methodo-stat-tutor2;ExternalConcept"/>
+        <obo:a_pour_difficulte rdf:datatype="&xsd;decimal">1.0</obo:a_pour_difficulte>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#e">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#s">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#ne">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#qcmt">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#qcm">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#q">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#pz">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#t">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#cz">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#uri">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#n">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#pa">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#u">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#m">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">Par defaut toutes les notions ne sont pas maitrisées</rdfs:label>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Exercice"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;needNotion"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#e"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#n"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Student"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;dontMasterNotion"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#n"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">Notions acquises par un étudiant</rdfs:label>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Student"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Exercice"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#e"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasValidateExo"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#e"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;giveNotion"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#e"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#n"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;masterNotion"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#n"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">Si au moins un dontMasterNotion alors ne pas proposer Exercice...
+Donc dontMasterNotion est par défaut.Si  masterNotion d&apos;une notion alors on elève dontMasterNotion et cette regle n&apos;est pas déclenchée pour l&apos;exericice -&gt; l&apos;étudiant peut le traiter</rdfs:label>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Exercice"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;dontMasterNotion"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#ne"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;needNotion"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#e"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#ne"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Student"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;nePasProposerExercise"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#e"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label>Pour valider un exo, il faut au moins un essai (exotry) qui est validé</rdfs:label>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Student"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;refersQcm"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#qcm"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#qcmt"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasValidateExoTry"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#qcmt"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasQcmTry"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#qcmt"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Qcm"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#qcm"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;QcmTry"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#qcmt"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasValidateExo"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#qcm"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:comment xml:lang="fr">Un document annoté, traite de notions. Ces notions sont celles qui sont tagguées</rdfs:comment>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;traiteNotion"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#pa"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#u"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;PubliZone"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#pz"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Tag"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasTag"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#pz"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;uri"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#u"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasPubliZone"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#pa"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#pz"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;PublicationAnnot"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#pa"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">Un qcm traite d&apos;une notion</rdfs:label>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Question"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#q"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;PubliZone"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#pz"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Tag"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasChoiceZone"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl#cz"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#q"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;uri"/>
+                                                                                                <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                                                                                                <swrl:argument2 rdf:resource="urn:swrl#uri"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasTag"/>
+                                                                                        <swrl:argument1 rdf:resource="urn:swrl#pz"/>
+                                                                                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasPubliZone"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl#cz"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl#pz"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasQuestion"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#q"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#qcm"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;ChoiceZone"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#cz"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Qcm"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#qcm"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;traiteNotion"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#qcm"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#uri"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">Validation d&apos;un exercice par un étudiant; on valide un essai, ce qui implique qu&apos;on valide un exercice</rdfs:label>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasValidateExoTry"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#qcmt"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;hasQcmTry"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#qcmt"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;mark"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#m"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#qcmt"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="&swrlb;greaterThan"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:resource="urn:swrl#m"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                        <rdf:first rdf:datatype="&xsd;integer">10</rdf:first>
+                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&methodo-stat-tutor2;refersQcm"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#qcm"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#qcmt"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Qcm"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#qcm"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;QcmTry"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#qcmt"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&methodo-stat-tutor2;Student"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
