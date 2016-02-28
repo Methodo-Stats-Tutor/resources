@@ -1,5 +1,9 @@
 triple-store/*
+lucene/*
 files/*
 !triple-store/.gitkeep
 !lucene/.gitkeep
 !files/.gitkeep
+*.swp
+*.swo
+*~
