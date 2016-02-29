@@ -1,7 +1,6 @@
 triple-store/*
 lucene/*
 files/*
-files/publi/*
 !triple-store/.gitkeep
 !lucene/.gitkeep
 !files/.gitkeep
